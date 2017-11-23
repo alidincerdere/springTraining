@@ -23,6 +23,11 @@ public class AnnotationDemoApp {
 		
 		System.out.println(theCoach.getDailyFortune());
 		
+		
+		Coach swimCoach = context.getBean("swimCoach",Coach.class);
+		
+		System.out.println(swimCoach.getDailyWorkout());
+		
 		context.close();		
 
 	}
