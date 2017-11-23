@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
+	@Autowired
 	private FortuneService fortuneService;
 
 	public TennisCoach() {
@@ -25,10 +26,13 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+	/*
+	 * no need for setters when using field injection
 	@Autowired
 	public void doCrazyStuff(FortuneService fortuneService) {
 		System.out.println("inside crazy method");
 		this.fortuneService = fortuneService;
 	}
+	*/
 
 }
