@@ -3,26 +3,25 @@ package com.luv2code.springdemo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
 public class SwimCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public SwimCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 
-	@Value("${foo.email}")
-	private String email;
-	
-	@Value("${foo.team}")
-	private String team;
-	
 	
 	@Override
 	public String getDailyWorkout() {
 		
-		return "email: " + email + " team: " + team + " now swim!";
+		return "Swim 1000 meters!";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return fortuneService.getFortune();
 	}
 
 }
