@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 	
 	@RequestMapping("/showForm")
@@ -29,7 +30,7 @@ public class HelloWorldController {
 		
 		model.addAttribute("upperCaseName", upperCaseName);
 		
-		return "helloworld";
+		return "helloworld"; 
 	}
 	
 	@RequestMapping("/processFormVersionThree")
