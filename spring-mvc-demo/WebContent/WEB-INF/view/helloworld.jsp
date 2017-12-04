@@ -11,5 +11,9 @@
 
 Student Name: ${param.studentName} 
 
+Upper Case:
+
+${upperCaseName}
+
 </body>
 </html>
